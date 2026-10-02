@@ -1,0 +1,5 @@
+import { NextApp } from 'next';
+
+// This is a placeholder for the Next.js setup.
+// Since I cannot run 'npx create-next-app' in this environment,
+// I will implement the critical frontend files as if the project is structured.

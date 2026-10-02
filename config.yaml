@@ -1,0 +1,32 @@
+# Project Configuration
+# This file contains meteorological thresholds and system settings.
+
+system:
+  app_name: "VAJRA"
+  version: "0.1.0"
+  env: "development"
+  log_level: "INFO"
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  model_storage: "models"
+  logs_dir: "logs"
+
+meteorology:
+  domain: "India"
+  lat_range: [6.0, 38.0]
+  lon_range: [68.0, 98.0]
+  variables:
+    - name: "temperature"
+      unit: "K"
+      bust_threshold: 2.0 # Kelvin
+    - name: "precipitation"
+      unit: "mm"
+      bust_threshold: 10.0 # mm
+  lead_times: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+confidence_mapping:
+  high: 0.3
+  medium: 0.7
+  low: 1.0
